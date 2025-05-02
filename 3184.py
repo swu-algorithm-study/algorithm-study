@@ -1,10 +1,10 @@
 from collections import deque
 
-# 방향 벡터: 상, 하, 좌, 우
+
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
-# 입력 처리
+
 R, C = map(int, input().split())
 field = [list(input().strip()) for _ in range(R)]
 visited = [[False] * C for _ in range(R)]
@@ -40,7 +40,6 @@ def bfs(x, y):
                         wolf += 1
     return sheep, wolf
 
-# 전체 마당 탐색
 for i in range(R):
     for j in range(C):
         if not visited[i][j] and field[i][j] != '#':
